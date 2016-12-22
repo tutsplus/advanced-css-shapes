@@ -76,29 +76,31 @@ mark {
 body {
   background-color: #faf6ec;
 }
-.site-content {
+blockquote {
+  font-family: "Lucida Bright", Georgia, serif;
+  font-style: italic;
+}
+blockquote p {
+  margin-left: 0;
+  font-size: 1.428em;
+  line-height: 1.6;
+}
+.example-1 .site-content {
   width: 100%;
   max-width: 820px;
   margin: 80px auto;
 }
-.site-content p {
-  margin-left: 0;
-  font-size: 1.428em;
-  line-height: 1.6;
+.example-1 .site-content blockquote p {
   color: #7a6120;
-  font-family: "Lucida Bright", Georgia, serif;
 }
-.site-content blockquote p {
-  font-style: italic;
-}
-.site-content blockquote cite {
+.example-1 .site-content blockquote cite {
   color: #b79030;
   font-weight: bold;
 }
-.site-content section {
+.example-1 .site-content section {
   margin-top: 60px;
 }
-.shape {
+.example-1 .site-content .shape {
   float: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -107,11 +109,12 @@ body {
   height: 265px;
   shape-margin: 20px;
 }
-.pentagon {
+.example-1 .site-content .pentagon {
   background-image: url('../img/pentagon.svg');
+  shape-image-threshold: 0.5;
   shape-outside: polygon(32px 126px, 163px 32px, 293px 127px, 244px 282px, 82px 281px);
 }
-.hexagon {
+.example-1 .site-content .hexagon {
   background-image: url('../img/hexagon.svg');
   shape-outside: polygon(31px 145px, 97px 31px, 228px 31px, 294px 144px, 228px 258px, 97px 258px);
   float: right;
@@ -119,31 +122,48 @@ body {
 .example-2 body {
   background: #212a34;
 }
-.example-2,
-.example-2 body,
-.example-2 .site-content {
-  height: 100%;
-}
-.example-2 .site-content {
+.example-2 .container {
   margin: 30px auto;
   width: 100%;
   max-width: 800px;
   height: 534px;
   overflow: hidden;
 }
-.example-2 .site-content figure {
+.example-2 .container figure {
   padding: 0;
   margin: 0;
 }
-.example-2 .site-content img {
+.example-2 .container img {
   display: block;
   height: auto;
   float: left;
   shape-outside: polygon(0px 0px, 800px 0px, 799px 83px, 736px 135px, 429px 135px, 464px 235px, 513px 315px, 483px 391px, 489px 436px, 507px 534px, 0px 534px);
 }
-.example-2 .site-content blockquote p {
+.example-2 .container blockquote p {
   font-size: 2em;
   color: #fff;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+.example-3 .container {
+  background-image: url('../img/parrot.jpg');
+  width: 600px;
+  height: 900px;
+  margin: 30px auto;
+}
+.example-3 .container blockquote {
+  padding-top: 56px;
+}
+.example-3 .container blockquote p {
+  font-size: 1em;
+  color: #000;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.32);
+}
+.example-3 .container .shape {
+  width: 600px;
+  height: 900px;
+  float: left;
+  shape-image-threshold: 0.5;
+  shape-outside: url('../img/parrot-shape.png');
+  shape-margin: 15px;
 }
 /*# sourceMappingURL=style.css.map */
